@@ -1,59 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+/* SVG Animation */
+svg path,
+svg rect{
+  fill: black;
+}
+
+
+
+/* Animaciones */
 .animated {
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-@media (print), (prefers-reduced-motion: reduce) {
-  .animated {
-    -webkit-animation-duration: 1ms !important;
-    animation-duration: 1ms !important;
-    -webkit-transition-duration: 1ms !important;
-    transition-duration: 1ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-    animation-iteration-count: 1 !important;
-  }
-}
-
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
   }
 
-  to {
-    opacity: 1;
-  }
-}
 
+@media (prefers-reduced-motion) {
+    .animated {
+      -webkit-animation: unset !important;
+      animation: unset !important;
+      -webkit-transition: none !important;
+      transition: none !important;
+    }
+  }
+
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
 @keyframes fadeIn {
-  from {
+from {
     opacity: 0;
-  }
+}
 
-  to {
+to {
     opacity: 1;
-  }
+}
 }
 
 .fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
-body{
-  padding: 1em;
-  background: white;
-  color: black;
-  text-align: center;
-  font-family: "Gill sans", sans-serif;
-  width: 80%;
-  margin: 0 auto;
-}
-/*
-  Color del Loading
-*/
-svg path,
-svg rect{
-  fill: #FF0080;
+-webkit-animation-name: fadeIn;
+animation-name: fadeIn;
 }

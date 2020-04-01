@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { InfoPaginaService } from 'src/app/services/info-pagina.service';
-import { DomSanitizer } from '@angular/platform-browser';
+import { InfoPaginaService } from '../../services/info-pagina.service';
 
 @Component({
   selector: 'app-about',
@@ -9,9 +8,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class AboutComponent implements OnInit {
 
- constructor( public infoService: InfoPaginaService)  {
-   
- }
+  constructor( public infoService: InfoPaginaService) { }
 
   ngOnInit() {
   }
